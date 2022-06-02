@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dotNetApp.OrderingPage" Title="Place Order" BackgroundColor="White" >
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Image Source="tshirtpicture.png" VerticalOptions="CenterAndExpand" HeightRequest="190" WidthRequest="300" />  
+            <Label Text="Name" FontSize="15" TextColor="Black"/>
+            <Entry Text="{Binding Name}" />
+            <Label Text="Surname" FontSize="15" TextColor="Black"/>
+            <Entry Text="{Binding Surname}" />
+            <Label Text="Gender"
+                   FontSize="15"
+                   TextColor="Black"
+                   HorizontalOptions="Start"/>
+            <Picker Title="Select Gender"
+                    VerticalOptions="Start"
+                    Margin="0,0"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Female</x:String>
+                    <x:String>Male</x:String>
+                   
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="T-Shirt Color"
+                   FontSize="15"
+                   TextColor="Black"
+                   HorizontalOptions="Start"/>
+            <Picker Title="Select t-shirt Color"
+                    VerticalOptions="Start"
+                    Margin="0,0"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Black</x:String>
+                    <x:String>Blue</x:String>
+                    <x:String>Purple</x:String>
+                    <x:String>Green</x:String>
+                    <x:String>Grey</x:String>
+                    <x:String>Orange</x:String>
+                    <x:String>Violet</x:String>
+                    <x:String>Maroon</x:String>
+
+
+                    </Picker.Items>
+            </Picker>
+
+            <Label Text="T-Shirt Size"
+                   FontSize="15"
+                   TextColor="Black"
+                   HorizontalOptions="Start"/>
+            <Picker Title="Select t-shirt Size"                  
+                    Margin="0,0"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Xtra Small</x:String>
+                    <x:String>Small</x:String>
+                    <x:String>Medium</x:String>
+                    <x:String>Large</x:String>
+                    <x:String>Extra Large</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Order Date" FontSize="15" TextColor="Black"/>
+            <Entry Text="{Binding OrderDate}" />
+            <Label Text="Address" TextColor="Black" FontSize="15"/>
+            <Entry Text="{Binding Address}" />
+                                
+            <Button x:Name="OrderButton" Text="Click To Save Order" Clicked="OrderButton_Clicked"/>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
