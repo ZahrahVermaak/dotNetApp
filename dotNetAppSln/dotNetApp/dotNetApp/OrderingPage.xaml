@@ -6,12 +6,12 @@
         <ScrollView>
         <StackLayout>
             <Image Source="tshirtpicture.png" VerticalOptions="CenterAndExpand" HeightRequest="190" WidthRequest="300" />  
-            <Label Text="Name" FontSize="15" TextColor="Black"/>
+            <Label Text="Name:" FontSize="20" TextColor="Black"/>
             <Entry Text="{Binding Name}" />
-            <Label Text="Surname" FontSize="15" TextColor="Black"/>
+            <Label Text="Surname" FontSize="20" TextColor="Black"/>
             <Entry Text="{Binding Surname}" />
-            <Label Text="Gender"
-                   FontSize="15"
+            <Label Text="Gender:"
+                   FontSize="20"
                    TextColor="Black"
                    HorizontalOptions="Start"/>
             <Picker Title="Select Gender"
@@ -26,7 +26,7 @@
             </Picker>
 
             <Label Text="T-Shirt Color"
-                   FontSize="15"
+                   FontSize="20"
                    TextColor="Black"
                    HorizontalOptions="Start"/>
             <Picker Title="Select t-shirt Color"
@@ -48,7 +48,7 @@
             </Picker>
 
             <Label Text="T-Shirt Size"
-                   FontSize="15"
+                   FontSize="20"
                    TextColor="Black"
                    HorizontalOptions="Start"/>
             <Picker Title="Select t-shirt Size"                  
@@ -62,9 +62,9 @@
                     <x:String>Extra Large</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text="Order Date" FontSize="15" TextColor="Black"/>
+            <Label Text="Order Date" FontSize="20" TextColor="Black"/>
             <Entry Text="{Binding OrderDate}" />
-            <Label Text="Address" TextColor="Black" FontSize="15"/>
+            <Label Text="Address" TextColor="Black" FontSize="20"/>
             <Entry Text="{Binding Address}" />
                                 
             <Button x:Name="OrderButton" Text="Click To Save Order" Clicked="OrderButton_Clicked"/>
